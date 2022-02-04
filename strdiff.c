@@ -39,6 +39,7 @@ int strdiff (char *a, char *b) {
         unsigned char hB = (unsigned char)b[i];
         for (int j=0; j<8; ++j) {
             if (getBit(hA, j) != getBit(hB, j)) {
+                res0 = res-1;
                 break;
             } else {
                 res += 1;
